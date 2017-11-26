@@ -1,0 +1,16 @@
+[
+{
+  "modid": "alma",
+  "name": "ALMA - A Leveling Mod Attempt",
+  "description": "*insert witty commentry*",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "odysseius.co.uk/alma",
+  "updateUrl": "",
+  "authorList": ["Odysseius"],
+  "credits": "McMMO, for giving the inspiration",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
