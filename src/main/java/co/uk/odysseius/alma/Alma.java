@@ -13,6 +13,5 @@ public class Alma {
     @EventHandler
     public void init(FMLInitializationEvent event) {
             System.out.println("Loading...");
-            event.toString();
     }
 }
