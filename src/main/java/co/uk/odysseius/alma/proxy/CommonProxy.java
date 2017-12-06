@@ -1,8 +1,10 @@
 package co.uk.odysseius.alma.proxy;
 
 import co.uk.odysseius.alma.config.ConfigHandler;
+import co.uk.odysseius.alma.helpers.BreakHandler;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -18,11 +20,14 @@ import java.io.File;
 public class CommonProxy {
 
     public static Configuration config;
+    BreakHandler handler = new BreakHandler();
 
     public void preInit(FMLPreInitializationEvent event) {
         File directory = event.getModConfigurationDirectory();
         config = new Configuration(new File(directory.getPath(), "alma/alma.cfg"));
         ConfigHandler.readConfig();
+
+        MinecraftForge.EVENT_BUS.register(handler);
     }
 
     public void init(FMLInitializationEvent event) {
